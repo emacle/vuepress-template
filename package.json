@@ -1,0 +1,21 @@
+{
+  "name": "vuepress-test-site",
+  "version": "0.0.1",
+  "description": "指南",
+  "main": "index.js",
+  "authors": {
+    "name": "qiaokun",
+    "email": "79464972@qq.com"
+  },
+  "repository": "/vuepress-test-site",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.4",
+    "@vuepress/plugin-medium-zoom": "^1.5.4",
+    "vuepress": "^1.5.3"
+  }
+}
