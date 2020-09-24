@@ -39,7 +39,7 @@ module.exports = {
         text: '指南',
         link: '/guide/',
       },
-      { text: 'External', link: 'https://google.com' }, // 外部链接
+      { text: 'Github', link: 'https://github.com/emacle/vuepress-template' }, // 外部链接
       // {
       //   text: 'Config',
       //   link: '/config/'
