@@ -10,6 +10,19 @@ module.exports = {
    */
   description: description,
   /**
+   * TODO: 指定base后，md文件中图片引用只能以
+   * <img :src="$withBase('/foo.png')" alt="foo"> 形式添加，麻烦
+   * 还是直接发布到时根目录或者虚拟主机指定端口还访问比较合适 
+   * https://example.com:12000
+   * Apache2 配置如下
+   * <VirtualHost *:12000>
+   *     ServerAdmin webmaster@localhost
+   *     DocumentRoot /var/www/vuepress/dist
+   * <Directory /var/www/vuepress/dist/>
+   *  AllowOverride All
+   * </Directory>
+   * </VirtualHost>
+   * 
    * Apache以Alias方式部署网站时,需要指定base
    * 如果你打算发布到 https://example.com/，则可以省略这一步，因为 base 默认即是 "/"。
    * 如果你打算发布到 https://example.com/vuepress，则将 base 设置为 "/vuepress/"。
@@ -21,7 +34,8 @@ module.exports = {
    *   Require all granted
    * </Directory>
    */
-  base: '/vuepress/',
+  // base: '/vuepress/',
+
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
@@ -65,7 +79,6 @@ module.exports = {
       '/guide/': genSidebarConfig('指南'),
     }
   },
-
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
